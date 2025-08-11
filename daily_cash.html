@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .dashboard {
+      background-color: #008000; /* Green */
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-icon {
+      background-color: white;
+      color: #008000;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .greeting {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .greeting h3 {
+      font-size: 16px;
+    }
+
+    .greeting span {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .bell-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .balance-info {
+      margin-top: 20px;
+    }
+
+    .balance-info p {
+      font-size: 14px;
+    }
+
+    .balance-info h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .eye-icon {
+      position: absolute;
+      top: 90px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      color: #008000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .day-box {
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      color: black;
+    }
+
+    .day-box span.naira-symbol {
+      display: block;
+      font-size: 20px;
+      color: gold;
+      margin-bottom: 5px;
+    }
+
+    .day-box span.day-label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .day-box.active {
+      background-color: #FFA500;
+      color: white;
+      border: none;
+    }
+
+    .day-box.active .naira-symbol,
+    .day-box.active .day-label {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dashboard Section -->
+  <div class="dashboard">
+    <div class="top-row">
+      <div class="user-info">
+        <div class="user-icon">V</div>
+        <div class="greeting">
+          <h3>Hi, Victory 👋</h3>
+          <span>Welcome back!</span>
+        </div>
+      </div>
+      <div class="bell-icon"></div>
+    </div>
+
+    <div class="balance-info">
+      <p>Your Balance</p>
+      <h2>₦180,000.00</h2>
+      <p>Weekly Rewards: ₦180,000.00</p>
+    </div>
+
+    <div class="eye-icon"></div>
+
+    <div class="buttons">
+      <button>Join Group</button>
+      <button>Withdrawal</button>
+    </div>
+  </div>
+
+  <!-- Day Boxes -->
+  <div class="days-grid">
+    <div class="day-box active">
+      <span class="day-label">Day 1</span>
+      <span class="naira-symbol">₦</span>
+      ₦100,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 2</span>
+      <span class="naira-symbol">₦</span>
+      ₦150,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 3</span>
+      <span class="naira-symbol">₦</span>
+      ₦200,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 4</span>
+      <span class="naira-symbol">₦</span>
+      ₦250,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 5</span>
+      <span class="naira-symbol">₦</span>
+      ₦300,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 6</span>
+      <span class="naira-symbol">₦</span>
+      ₦350,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 7</span>
+      <span class="naira-symbol">₦</span>
+      ₦400,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 8</span>
+      <span class="naira-symbol">₦</span>
+      ₦450,000
+    </div>
+    <div class="day-box">
+      <span class="day-label">Day 9</span>
+      <span class="naira-symbol">₦</span>
+      ₦500,000
+    </div>
+  </div>
+
+</body>
+</html>
